@@ -1,0 +1,26 @@
+Project 2:
+
+
+Given Query:
+
+SELECT A.vineyardName, B.futureName
+FROM Vineyard AS A, Future AS B, Funding AS C
+WHERE C.vineyardID = A.vineyardID AND C.futureID = B.futureID;
+
+OUTPUT:
+VineyarName,futureName
+vine real, BARCLAYS 10152015 CHARDONNAY $128
+
+
+
+Equivalent Query:
+
+SELECT A.vineyardName, B.futureName
+FROM Vineyard AS A, Future AS B, Funding AS C
+INNER JOIN Future
+WHERE C.vineyardID = A.vineyardID AND C.futureID=B.futureID;
+
+OUTPUT:
+VineyarName,futureName
+vine real, BARCLAYS 10152015 CHARDONNAY $128
+
